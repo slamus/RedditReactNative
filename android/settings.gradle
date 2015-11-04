@@ -1,0 +1,3 @@
+rootProject.name = 'RedditReact'
+
+include ':app'
