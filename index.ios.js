@@ -1,54 +1,38 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
+
 'use strict';
 
-import rawjs from 'raw.js';
-
 var React = require('react-native');
+var MainScreen = require('./MainScreen');
+var PostListScreen = require('./PostListScreen');
+
 var {
   AppRegistry,
+  NavigatorIOS,
   StyleSheet,
-  Text,
-  View,
 } = React;
 
 var RedditReact = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <NavigatorIOS
+        barTintColor='#12B35F'
+        titleTextColor='#FCFEFF'
+        tintColor='#FCFEFF'
+        shadowHidden={true}
+        style={styles.main}
+        initialRoute={{
+          title: 'Subreddits',
+          component: MainScreen,
+        }}
+      />
     );
-  }
+  },
 });
 
 var styles = StyleSheet.create({
-  container: {
+  main: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    backgroundColor: '#FCFEFF',
   },
 });
 
