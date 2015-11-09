@@ -1,3 +1,8 @@
+//
+// ACTION BUTTON
+//
+// A button component with 2 style variants
+//
 
 'use strict';
 

@@ -1,3 +1,8 @@
+//
+// FAVOURITE BUTTON
+//
+// A simple Favourite Component using images
+//
 
 'use strict';
 
@@ -14,7 +19,7 @@ var FavouriteButton = React.createClass({
   render: function() {
     return(
       <TouchableHighlight style={styles.favouriteButton} onPress={this.props.onPress}>
-          <Image style={styles.favouriteButtonIcon} source={this.props.isFavourite ? require('image!favoriteEnabled') : require('image!favoriteDisabled')}/>
+          <Image style={styles.favouriteButtonIcon} source={this.props.isFavourite ? require('./img/favoriteEnabled.png') : require('./img/favoriteDisabled.png')}/>
       </TouchableHighlight>
     );
   },

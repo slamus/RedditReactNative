@@ -1,3 +1,8 @@
+//
+// SECTION TITLE
+//
+// A component used to keep everything aesthetically coherent
+//
 
 'use strict';
 

@@ -1,3 +1,8 @@
+//
+// POST ROW
+//
+// A simple amd minimalist post component
+//
 
 'use strict';
 

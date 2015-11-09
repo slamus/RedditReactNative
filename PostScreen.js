@@ -1,3 +1,11 @@
+//
+// POST SCREEN
+//
+// Post Details Screen used for:
+//  - Displaying the 5 top comments
+//  - Accessing useful webviews (URL and Source)
+//
+
 
 'use strict';
 
@@ -127,7 +135,7 @@ var PostScreen = React.createClass({
     var url = `${this.props.post.data.url}`;
     this.props.navigator.push({
       component: RedditWebView,
-      title: 'Post Media',
+      title: this.props.post.data.domain,
       passProps: {
         url: url,
       },
@@ -136,7 +144,7 @@ var PostScreen = React.createClass({
   render: function() {
     var msg = null;
     if (!this.state.topComments.length) {
-      (this.state.isLoading) ? msg = "Loading" : msg = "Error while fetching Post..." ;
+      (this.state.isLoading) ? msg = "Loading" : msg = "No Comments..." ;
     }
     return (
       <ScrollView style={styles.main}>

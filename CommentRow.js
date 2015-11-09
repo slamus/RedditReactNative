@@ -1,3 +1,9 @@
+//
+// COMMENT ROW
+//
+// A read-only comment component, taking account
+// of parent/children relationships
+//
 
 'use strict';
 

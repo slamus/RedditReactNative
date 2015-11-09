@@ -1,3 +1,9 @@
+//
+// IOS APP ENTRY POINT
+//
+// RedditReact is a simple reddit browsing and exploring app.
+// It uses local storage to remember your favourite subreddit.
+//
 
 'use strict';
 
@@ -8,10 +14,15 @@ var PostListScreen = require('./PostListScreen');
 var {
   AppRegistry,
   NavigatorIOS,
+  StatusBarIOS,
   StyleSheet,
 } = React;
 
+
 var RedditReact = React.createClass({
+  componentDidMount: function() {
+    StatusBarIOS.setStyle('light-content');
+  },
   render: function() {
     return (
       <NavigatorIOS

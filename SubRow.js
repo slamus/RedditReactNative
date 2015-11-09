@@ -16,6 +16,7 @@ var {
 
 var MainScreenRow = React.createClass({
   onSubPress: function() {
+    this.props.addToHistory(this.props.subredditName);
     this.props.navigator.push({
       component: PostListScreen,
       title: '/' + this.props.subredditName,

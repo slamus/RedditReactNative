@@ -1,3 +1,8 @@
+//
+// MESSAGE BOX
+//
+// A simple message module for user feedback
+//
 
 "use strict"
 
@@ -14,7 +19,6 @@ var MessageBox = React.createClass({
   render: function() {
     if (this.props.msg) {
       return (
-
         <View style={[styles.messageBox, this.props.style]}>
          <Text style={styles.messageBoxText}>{this.props.msg}</Text>
         </View>

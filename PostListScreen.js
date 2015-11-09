@@ -1,8 +1,7 @@
 //
-// MAIN SCREEN
+// POST LIST
 //
-// Main Screen used for:
-//  - Listing Posts according to subreddit
+// Post list Screen : for browsing posts with infinite Scroll
 //
 
 'use strict';
@@ -100,9 +99,6 @@ var PostListScreen = React.createClass({
     return (
       <View style={styles.main}>
         <MessageBox style={[{marginTop:64,}]} msg={msg} />
-        <View style={styles.favContainer}>
-          <FavouriteButton onPress={this.props.toggleFavourite} isFavourite={this.props.isFavourite()} />
-        </View>
         <ListView
           dataSource={this.state.dataSource}
           showsVerticalScrollIndicator={false}
@@ -117,17 +113,10 @@ var PostListScreen = React.createClass({
 
 var styles = StyleSheet.create({
   main: {
-    flex: 1,
     backgroundColor: '#FCFEFF',
-    flexDirection: 'column',
-  },
-  favContainer: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
+    flex: 1,
   },
   postsList: {
-    flexDirection: 'column',
     marginTop: 10,
   },
 });
